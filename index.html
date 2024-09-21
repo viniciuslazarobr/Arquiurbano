@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empresa de Arquitetura e Urbanismo especializada em projetos inovadores e sustentáveis.">
+    <title>Arquitetura & Urbanismo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e menu -->
+    <header>
+        <div class="logo">
+            <h1>Arquitetura & Urbanismo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de introdução com um slider de imagens -->
+    <section id="home">
+        <div class="hero">
+            <h2>Transformando espaços, criando experiências únicas</h2>
+            <p>Arquitetura inovadora e urbanismo sustentável.</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Com anos de experiência no mercado, nossa equipe é formada por profissionais dedicados à criação de espaços que refletem a personalidade e as necessidades dos nossos clientes. Acreditamos em projetos que vão além da estética, priorizando funcionalidade e sustentabilidade.</p>
+    </section>
+    <!-- Seção de Blog -->
+    <section id="blog">
+        <h2>Últimos Artigos</h2>
+        <div class="blog-posts">
+            <div class="post">
+                <h3>Tendências em Arquitetura para 2024</h3>
+                <p>Descubra as principais tendências que irão moldar o futuro da arquitetura.</p>
+                <a href="#">Leia Mais</a>
+            </div>
+            <div class="post">
+                <h3>Como Projetar Cidades Sustentáveis</h3>
+                <p>Um olhar sobre o futuro do urbanismo sustentável e suas práticas inovadoras.</p>
+                <a href="#">Leia Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact">
+        <h2>Entre em Contato</h2>
+        <form action="send_email.php" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Arquitetura & Urbanismo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+    
+        if (name === "" || email === "" || message === "") {
+            alert("Por favor, preencha todos os campos.");
+            e.preventDefault();  // Evita o envio do formulário se não estiver preenchido corretamente
+        }
+    });
+    </script>
+    
